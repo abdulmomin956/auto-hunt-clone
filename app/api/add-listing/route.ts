@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
             data: carListing,
         });
     } catch (error: any) {
-        console.log(error);
+        console.log(error, 48);
         return NextResponse.json(
             {
                 error: error?.message || "Internal Server Error",

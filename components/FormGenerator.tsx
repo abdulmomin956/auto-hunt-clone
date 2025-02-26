@@ -39,7 +39,7 @@ const FormGenerator: React.FC<FormGeneratorProps> = ({
     ) => {
         return options.filter((option) => valueMultiSelect.includes(option.value));
     };
-
+    // console.log(defaultValue)
     return (
         <div className="grid gap-2">
             {!label && <Label htmlFor={name}>{label}</Label>}
@@ -50,7 +50,7 @@ const FormGenerator: React.FC<FormGeneratorProps> = ({
                     className="!h-12 text-sm shadow-none placeholder:!text-muted-foreground"
                     disabled={disabled}
                     placeholder={placeholder || label}
-                    defaultValue={defaultValue}
+                    defaultValue='brand'
                     {...register(name)}
                 />
             )}
@@ -171,7 +171,8 @@ const FormGenerator: React.FC<FormGeneratorProps> = ({
                     disabled={disabled}
                     className="w-full text-sm !min-h-12 max-h-auto shadow-none"
                     badgeClassName="!bg-primary/10 shadow-none text-black !font-medium"
-                    value={getSelectedItems(options, valueMultiSelect) || []}
+                    // value={getSelectedItems(options, valueMultiSelect) || []}
+                    value={[]}
                     onChange={(selectedItems) => {
                         const selectedValues = selectedItems.map((item) => item.value);
                         onChange?.(selectedValues);

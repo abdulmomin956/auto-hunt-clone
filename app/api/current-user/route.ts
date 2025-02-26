@@ -24,7 +24,7 @@ export const GET = async (req: NextRequest) => {
             shop,
         });
     } catch (error: any) {
-        console.log(error);
+        console.log(error, 27);
         return NextResponse.json(
             {
                 message: error.message || "Internal Server Error",

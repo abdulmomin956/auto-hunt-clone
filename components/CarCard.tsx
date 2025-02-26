@@ -59,6 +59,7 @@ const CarCard: React.FC<CarCardProps> = ({ listing, layout = "grid" }) => {
                             )}
                             width={layout === "list" ? 300 : 800}
                             height={layout === "list" ? 200 : 500}
+                            priority={true}
                         />
                     </div>
                     <CardContent

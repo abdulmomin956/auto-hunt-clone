@@ -47,7 +47,7 @@ const createGroupChannel = async (name: string, user_ids: string[]) => {
         const response = await axios.post(SEND_BIRD_GROUP_CHANNEL_API_URL, data, {
             headers,
         });
-        console.log("Group channel created:", response.data);
+        console.log("Group channel created:", response.data, 50);
         return response.data;
     } catch (error) {
         console.error("Error creating group channel:", error);

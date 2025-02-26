@@ -29,7 +29,7 @@ export const GET = async (
             listings: listing.documents,
         });
     } catch (error: any) {
-        console.log(error);
+        console.log(error, 32);
         return NextResponse.json(
             { error: error.message || "Internal Server Error" },
             { status: 500 }

@@ -87,6 +87,7 @@ const CarCarousel = ({
                                             style={{
                                                 boxShadow: "0 7px 14.8px 3.2px #0207010a",
                                             }}
+                                            priority={true}
                                         />
                                     </div>
                                 </CarouselItem>
@@ -162,7 +163,7 @@ const CarCarousel = ({
                                         className="!w-full !h-full object-cover"
                                         width={185}
                                         height={185}
-                                        priority
+                                        priority={true}
                                         alt=""
                                     />
 
