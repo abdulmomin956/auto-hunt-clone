@@ -7,6 +7,7 @@ import LoginDialog from "@/components/auth/LoginDialog";
 import QueryProvider from "@/context/query-provider";
 import { Suspense } from "react";
 import FallbackLoader from "@/components/loader/fallbackLoader";
+// import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 export const metadata: Metadata = {
   title: "Auto Hunt",
@@ -27,6 +28,7 @@ export default function RootLayout({
             <NuqsAdapter>
               <RegisterDialog />
               <LoginDialog />
+              {/* <ReactQueryDevtools /> */}
               {children}
             </NuqsAdapter>
             <Toaster />

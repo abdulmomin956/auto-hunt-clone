@@ -34,3 +34,121 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+```
+car-market-next
+├─ @types
+│  ├─ api.type.ts
+│  └─ index.type.ts
+├─ app
+│  ├─ (dashboard)
+│  │  ├─ layout.tsx
+│  │  └─ my-shop
+│  │     ├─ add-listing
+│  │     │  └─ page.tsx
+│  │     └─ page.tsx
+│  ├─ (web)
+│  │  ├─ detail
+│  │  │  ├─ [slug]
+│  │  │  │  └─ [carId]
+│  │  │  │     └─ page.tsx
+│  │  ├─ layout.tsx
+│  │  ├─ page.tsx
+│  │  ├─ search
+│  │  │  ├─ page.tsx
+│  │  ├─ shop
+│  │  │  └─ [shopId]
+│  │  │     └─ page.tsx
+│  ├─ api
+│  ├─ favicon.ico
+│  ├─ globals.css
+│  └─ layout.tsx
+├─ components
+│  ├─ auth
+│  │  ├─ LoginDialog.tsx
+│  │  └─ RegisterDialog.tsx
+│  ├─ CarCard.tsx
+│  ├─ ChatSellerButton.tsx
+│  ├─ EmptyState.tsx
+│  ├─ FileUploader.tsx
+│  ├─ FilterAccordionItem.tsx
+│  ├─ FormGenerator.tsx
+│  ├─ loader
+│  │  └─ fallbackLoader.tsx
+│  ├─ logo
+│  │  └─ index.tsx
+│  ├─ NavBar.tsx
+│  ├─ NavBreadCrumb.tsx
+│  ├─ shop
+│  │  ├─ all-listing.tsx
+│  │  └─ shop-info.tsx
+│  ├─ skeleton-loader
+│  │  └─ carlisting-skeleton.tsx
+│  └─ ui
+│     ├─ accordion.tsx
+│     ├─ avatar.tsx
+│     ├─ badge.tsx
+│     ├─ breadcrumb.tsx
+│     ├─ button.tsx
+│     ├─ card.tsx
+│     ├─ carousel.tsx
+│     ├─ checkbox.tsx
+│     ├─ command.tsx
+│     ├─ dialog.tsx
+│     ├─ dropdown-menu.tsx
+│     ├─ form.tsx
+│     ├─ input.tsx
+│     ├─ label.tsx
+│     ├─ multi-select.tsx
+│     ├─ phone-input.tsx
+│     ├─ popover.tsx
+│     ├─ progress.tsx
+│     ├─ radio-group.tsx
+│     ├─ scroll-area.tsx
+│     ├─ select.tsx
+│     ├─ separator.tsx
+│     ├─ sheet.tsx
+│     ├─ skeleton.tsx
+│     ├─ slider.tsx
+│     ├─ textarea.tsx
+│     ├─ toast.tsx
+│     └─ toaster.tsx
+├─ components.json
+├─ constants
+│  ├─ car-options.ts
+│  ├─ listing-fields.ts
+│  └─ server.ts
+├─ context
+│  └─ query-provider.tsx
+├─ hooks
+│  ├─ api
+│  │  └─ use-current-user.ts
+│  ├─ use-debounce.ts
+│  ├─ use-fileuploader.tsx
+│  ├─ use-filter.tsx
+│  ├─ use-login.dialog.ts
+│  ├─ use-register.dialog.ts
+│  └─ use-toast.ts
+├─ lib
+│  ├─ app-config.ts
+│  ├─ appwrite.ts
+│  ├─ fetcher.ts
+│  ├─ helper.ts
+│  ├─ sendbird.ts
+│  └─ utils.ts
+├─ next.config.ts
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.mjs
+├─ public
+│  └─ images
+│     └─ hero-car.png
+├─ README.md
+├─ tailwind.config.ts
+├─ tsconfig.json
+└─ validation
+   ├─ auth.validation.ts
+   ├─ listing.validation.ts
+   └─ upload.validation.ts
+
+```
