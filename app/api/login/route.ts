@@ -10,7 +10,6 @@ export async function POST(request: NextRequest) {
         const { email, password } = await loginSchema.parseAsync(body);
         const { account } = await createAdminClient();
         const session = await account.createEmailPasswordSession(email, password);
-        console.log(session);
 
         (await cookies()).set(AUTH_COOKIE_NAME, session.secret, {
             path: "/",
