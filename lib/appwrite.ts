@@ -6,6 +6,7 @@ import { cookies } from "next/headers";
 import { AUTH_COOKIE_NAME } from "@/constants/server";
 
 export async function createAdminClient() {
+    console.log(APP_CONFIG.APPWRITE.ENDPOINT, APP_CONFIG.APPWRITE.PROJECT_ID, APP_CONFIG.APPWRITE.KEY);
     const client = new Client()
         .setEndpoint(APP_CONFIG.APPWRITE.ENDPOINT)
         .setProject(APP_CONFIG.APPWRITE.PROJECT_ID)
