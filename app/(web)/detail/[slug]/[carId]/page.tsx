@@ -1,34 +1,29 @@
-"use client";
+// "use client";
 import React, { use } from "react";
 import { ListingType } from "@/@types/api.type";
 import NavBreadCrumb from "@/components/NavBreadCrumb";
 import { getSingleListingQueryFn } from "@/lib/fetcher";
 import { slugToCarName } from "@/lib/helper";
-import { useQuery } from "@tanstack/react-query";
 import CarHeader from "../../_components/car-header";
 import CarCarousel from "../../_components/car-carousel";
 import CarDetails from "../../_components/car-details";
 import ShopInfo from "../../_components/shop-info";
 
-const CarDetail = ({
+
+const CarDetail = async ({
     params
 }: {
-    params: Promise<{
-        slug: string;
-        carId: string;
-    }>;
+    params: Promise<{ slug: string; carId: string }>
 }) => {
-    //console.log('params=>', useQuery)
-    const resolvedParams = use(params);
-    const { slug, carId } = resolvedParams;
-    const carName = slugToCarName(slug);
+    const { slug, carId } = await params;
 
-    const { data, isPending, isError } = useQuery({
-        queryKey: ["listing", carId],
-        queryFn: () => getSingleListingQueryFn(carId),
-    });
-
+    const data = await getSingleListingQueryFn(carId);
     const listing = data?.listing as ListingType;
+
+    const carName = slugToCarName(slug);
+    const isPending = !listing;
+    const isError = !listing;
+
 
     const breadcrumbItems = [
         { label: "Auto Hunt", href: "/" },

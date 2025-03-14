@@ -61,7 +61,8 @@ export const getMyShopQueryFn = async () => {
 
 //get single listing
 export const getSingleListingQueryFn = async (listingId: string) => {
-    const response = await axios.get(`/api/listing/${listingId}`);
+    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000"; // Default fallback
+    const response = await axios.get(`${baseUrl}/api/listing/${listingId}`);
     return response.data;
 };
 
