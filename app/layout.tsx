@@ -24,15 +24,15 @@ export default function RootLayout({
       <body
         className={`bg-[#EBF2F7] antialiased`}>
         <QueryProvider>
-          {/* <Suspense fallback={<FallbackLoader />}> */}
-          <NuqsAdapter>
-            <RegisterDialog />
-            <LoginDialog />
-            {/* <ReactQueryDevtools /> */}
-            {children}
-          </NuqsAdapter>
-          <Toaster />
-          {/* </Suspense> */}
+          <Suspense fallback={<FallbackLoader />}>
+            <NuqsAdapter>
+              <RegisterDialog />
+              <LoginDialog />
+              {/* <ReactQueryDevtools /> */}
+              {children}
+            </NuqsAdapter>
+            <Toaster />
+          </Suspense>
         </QueryProvider>
       </body>
     </html>

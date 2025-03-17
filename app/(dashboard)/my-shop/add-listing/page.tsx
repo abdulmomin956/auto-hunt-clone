@@ -35,6 +35,8 @@ const AddListing = () => {
     const { data } = useCurrentUser();
     const shop = data?.shop;
 
+    if (!data) return <p>Loading...</p>;
+
     const { mutate, isPending } = useMutation({
         mutationFn: addListingMutationFn,
     });

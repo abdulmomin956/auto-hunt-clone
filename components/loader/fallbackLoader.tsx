@@ -7,7 +7,7 @@ const FallbackLoader = () => {
             className="w-full h-svh bg-black/5 flex 
       items-center justify-center"
         >
-            <Loader className="w-12 h-12 animate-spin" />;
+            <Loader className="w-12 h-12 animate-spin" />
         </div>
     );
 };

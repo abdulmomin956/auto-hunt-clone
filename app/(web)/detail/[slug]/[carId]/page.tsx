@@ -1,5 +1,4 @@
-// "use client";
-import React, { use } from "react";
+import React from "react";
 import { ListingType } from "@/@types/api.type";
 import NavBreadCrumb from "@/components/NavBreadCrumb";
 import { getSingleListingQueryFn } from "@/lib/fetcher";

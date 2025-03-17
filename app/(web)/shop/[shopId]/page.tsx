@@ -9,7 +9,11 @@ import { ListingType } from "@/@types/api.type";
 
 const Shop = () => {
     const params = useParams();
-    const shopId = params.shopId as string;
+    const shopId = params?.shopId as string;
+
+    if (!shopId) {
+        return <p>Loading...</p>; // Prevent rendering before params are ready
+    }
 
     const { data, isPending } = useQuery({
         queryKey: ["shop", shopId],

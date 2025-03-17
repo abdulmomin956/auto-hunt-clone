@@ -80,7 +80,7 @@ const NavBar = () => {
           justify-start mx-9 text-white/80 space-x-6"
                 >
                     <li className="flex-[0.6] hidden md:flex">
-                        {!hideSearchPathname.includes(pathname) && (
+                        {pathname && !hideSearchPathname.includes(pathname) && (
                             <div
                                 className="w-full max-w-[320px] h-10
             bg-white rounded-lg relative"
@@ -108,7 +108,7 @@ const NavBar = () => {
                         )}
 
                     </li>
-                    {!hideNavPath.includes(pathname) && (
+                    {pathname && !hideNavPath.includes(pathname) && (
                         <>
                             <li>
                                 <Link href="/" className="text-sm font-medium">
